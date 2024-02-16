@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Managment System</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+    }
+    body{
+        background-color: rgb(29, 26, 26);
+    }
+    form{
+        margin-left: 440px;
+        padding-left: 140px;
+        padding-top: 25px;
+        border: 1px solid black;
+        width: 500px;
+        background-color: lightseagreen;
+        border: none;
+        height: 450px;
+        box-shadow: rgba(76, 72, 72, 0.16) 0px 10px 36px 0px, rgba(76, 72, 72, 0.16) 0px 0px 0px 1px;
+        border-radius: 20px;
+    }
+    label{
+        padding-left: 45px;
+        font-size: 18px;
+        color: white;
+    }
+    input{
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .btn{
+        width: 100px;
+        height: 30px;
+        margin-left: 50px;
+        color: white;
+        background: rgb(10, 238, 10);
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+    }
+    h3{
+        font-size: 30px;
+        color: greenyellow;
+        background: black;
+        width: 400px;
+        height: 50px;
+        padding-top: 8px;
+    }
+    
+</style>
+<body>
+    <!-- <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="About">About</a></li>
+                <li><a href="Setting">Setting</a></li>
+                <li><a href="Service">Services</a></li>
+                <li><a href="secondpage">Contact</a></li>
+            </ul>
+           </nav>
+    </div> -->
+    <center><h3>Employee Managment System</h3></center><br><br>
+    <form action="" method="post">
+        {%csrf_token%}
+        <label for="">Employee ID</label><br>
+        <input type="text" name="emid"><br><br>
+        <label for="">Employee Name</label><br>
+        <input type="text" name="nm"><br><br>
+        <label for="">Employee Post</label><br>
+        <input type="text" name="pst"><br><br>
+        <label for="">Employee Email</label><br>
+        <input type="email" name="email" ><br><br>
+        <label for="" class="join">Employee Joining Date</label><br>
+        <input type="date" name="jd"><br><br>
+        <input type="submit" class="btn">
+    </form>
+
+    <!-- {% load static %}
+    <img src="{% static 'bg.webp' %}" height="200" width="300"/>
+    <h1>This is my first template</h1>
+    <h2>Thank you</h2> -->
+
+    <!-- Name :{{Name}} <br>
+    Age:  {{Age}} <br>
+    Course: {{Course}}<br>
+
+    <a href="Static\mycv.pdf">Click to open</a><br>
+    <a href="Static\CV.docx">Click to Download</a> -->
+
+</body>
+
+</html>

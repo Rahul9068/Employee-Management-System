@@ -1,0 +1,65 @@
+from django.db import models
+
+STATE_CHOICE = (
+ ('Andaman & Nicobar Islands','Andaman & Nicobar Islands'),
+ ('Andhra Pradesh','Andhra Pradesh'),
+ ('Arunachal Pradesh','Arunachal Pradesh'),
+ ('Assam','Assam'),
+ ('Bihar','Bihar'),
+ ('Chandigarh','Chandigarh'),
+ ('Chhattisgarh','Chhattisgarh'),
+ ('Dadra & Nagar Haveli','Dadra & Nagar Haveli'),
+ ('Daman and Diu','Daman and Diu'),
+ ('Delhi','Delhi'),
+ ('Goa','Goa'),
+ ('Gujarat','Gujarat'),
+ ('Haryana','Haryana'),
+ ('Himachal Pradesh','Himachal Pradesh'),
+ ('Jammu & Kashmir','Jammu & Kashmir'),
+ ('Jharkhand','Jharkhand'),
+ ('Karnataka','Karnataka'),
+ ('Kerala','Kerala'),
+ ('Lakshadweep','Lakshadweep'),
+ ('Madhya Pradesh','Madhya Pradesh'),
+ ('Maharashtra','Maharashtra'),
+ ('Manipur','Manipur'),
+ ('Meghalaya','Meghalaya'),
+ ('Mizoram','Mizoram'),
+ ('Nagaland','Nagaland'),
+ ('Odisha','Odisha'),
+ ('Puducherry','Puducherry'),
+ ('Punjab','Punjab'),
+ ('Rajasthan','Rajasthan'),
+ ('Sikkim','Sikkim'),
+ ('Tamil Nadu','Tamil Nadu'),
+ ('Telangana','Telangana'),
+ ('Tripura','Tripura'),
+ ('Uttarakhand','Uttarakhand'),
+ ('Uttar Pradesh','Uttar Pradesh'),
+ ('West Bengal','West Bengal')
+)
+
+class Resume(models.Model):
+     name = models.CharField(max_length=100)
+     dob = models.DateField(auto_now=False, auto_now_add=False)
+     gender = models.CharField(max_length=100)
+     locality = models.CharField(max_length=100)
+     city = models.CharField(max_length=100)
+     pin = models.PositiveBigIntegerField()
+     state = models.CharField(choices= STATE_CHOICE, max_length=50)
+     mobile = models.PositiveBigIntegerField()
+     email = models.EmailField()
+     job_city = models.CharField(max_length=50)
+     profile_image = models.ImageField(upload_to='profileimg', blank=True)
+     my_flie = models.FileField(upload_to='doc', blank=True)
+
+
+
+class Employee(models.Model):
+    Emp_Id=models.IntegerField()
+    Emp_Name=models.CharField(max_length=40)
+    Emp_Post=models.CharField(max_length=40)
+    Emp_Email=models.EmailField(max_length=40)
+    Emp_JoinD=models.DateField()
+    def __str__(self):
+        return self.Emp_Name

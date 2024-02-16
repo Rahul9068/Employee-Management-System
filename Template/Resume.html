@@ -1,0 +1,211 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/49eae9356c.js"
+    crossorigin="anonymous"
+  ></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,300&display=swap');
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+        }
+        .container{
+            border: 1px solid black;
+            background-color: lightseagreen;
+            color:#fff;
+            height:180px;
+        }
+        
+        .skill{
+            padding-right: 288px;
+        }
+        .intrest{
+            padding-right: 60px;
+        }
+        h3,h2{
+            color:aqua;
+        }
+        h3::after{
+            content: '';
+            width: 200px;
+            height: 0px;
+            border: 1px solid aqua;
+            color: aqua;
+            display: block;
+
+        }
+        h2::after{
+            content: '';
+            width: 350px;
+            height: 0px;
+            border: 1px solid aqua;
+            color: aqua;
+            display: block;
+        }
+        
+        
+        .main{
+            display: flex;
+            justify-content: space-between;
+            padding-right: 20px;
+            padding-left: 30px;
+        }
+        .main1{
+            display: flex;
+            justify-content: space-between;
+            padding-right: 20px;
+            padding-left: 30px;
+        }
+        .main2{
+            display: flex;
+            justify-content: space-between;
+            padding-right: 20px;
+            padding-left: 30px;
+        }
+        .container1{
+            border: 1px solid black;
+            height:550px;
+            
+        }
+        h4{
+            list-style-type:disc;
+        }
+        #n{
+            font-size: 30px;
+       
+        }
+        #n,#a{
+            padding-left: 30px;
+        }
+        #a{
+            font-size: 18px;
+        }
+        .contact{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 30px;
+            padding-top: 13px;
+        }
+        #p{
+            padding-right: 270px;
+        }
+        .place{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 30px;
+        }
+        #l{
+            padding-left: 10px;
+        }
+        .main3{
+            display: flex;
+            justify-content: space-between;
+            /* padding-right: 20px; */
+           
+        }
+        .hobie{
+            padding-right: 800px;
+        }
+        .lan{
+            position: relative;
+            right: 300px;
+        }
+        hr{
+            background-color:black;
+        }
+        h4{
+            list-style:circle;
+            list-style-type: circle;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="n">{{Name}}</h1>
+        <p id="a">{{About}}</p><br>
+        <hr>
+        <div class="contact">
+            <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;965rahulsingh@gmail.com</p>
+            <p id="p"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;9068043787</p>
+        </div>
+        <div class="place">
+            <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;Dehradun</p>
+            <p id="l"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;&nbsp;http://www.linkdin.com/rahulsing/55a352239</p>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="main">
+            <div class="project">
+                <h2>{{Intern}}</h2><br>
+                <h3>PROJECT:-</h3><br>
+                <h4>1:-{{Project1}}</h4>
+                <h4>2:-{{Project2}}</h4>
+                <h4>3:-{{Project3}}</h4>
+                <h4>4:-{{Project4}}</h4>
+            </div>
+            <div class="skill">
+                <h3>SKILLS:-</h3><br>
+                <h4>1:-{{Skill1}}</h4>
+                <h4>2:-{{Skill2}}</h4>
+                <h4>3:-{{Skill3}}</h4>
+                <h4>4:-{{Skill4}}</h4>
+                <h4>5:-{{Skill5}}</h4>
+                <h4>6:-{{Skill6}}</h4>
+                <h4>7:-{{Skill7}}</h4>
+            </div>
+        </div><br>
+        <div class="main1">
+            <div class="education">
+                <h3>EDUCATION:-</h3><br>
+                <h4>{{edu1}}</h4><br>
+                <h4>{{edu2}}</h4>
+            </div>
+            <div class="add_skill">
+                <h3>ADDITIONAL SKILLS:-</h3><br>
+                <h4>1:-{{add1}}</h4>
+                <h4>2:-{{add2}}</h4>
+                <h4>3:-{{add3}}</h4>
+                <h4>4:-{{add4}}</h4>
+            </div>
+        </div><br>
+        <div class="main2">
+            <div class="course">
+                <h3>COURSE:-</h3><br>
+                <h4>1:-{{cou1}}</h4>
+                <h4>2:-{{cou2}}</h4>
+            </div>
+            <div class="intrest">
+                <h3>INTRESTED:-</h3><br>
+                <h4>1:-{{int1}}</h4>
+                <h4>2:-{{int2}}</h4>
+                <h4>3:-{{int3}}</h4>
+            </div>
+        </div>
+        <div class="main3"><br>
+            <div class="hobie">
+                <h3>HOBBIES:-</h3><br>
+                <h4>1:-{{hob1}}</h4>
+                <h4>2:-{{hob2}}</h4>
+                <h4>3:-{{hob3}}</h4>
+                </div>
+                <div class="lan"><br>
+                    <h3>LANGUAGE:-</h3><br>
+                    <h4>1:-{{lan1}}</h4>
+                    <h4>2:-{{lan2}}</h4>
+                </div>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html> -->
